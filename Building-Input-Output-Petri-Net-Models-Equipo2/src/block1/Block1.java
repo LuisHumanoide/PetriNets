@@ -72,7 +72,7 @@ public class Block1 {
     }
 
     public void doProcess(String input,String output) {
-        String inputFileName = output;// opcional para guardar los archivos
+        String inputFileName = "DO.TXT";// opcional para guardar los archivos
         //String outputFileName = "05_10_2011-2_1.txt";
         String outputFileName = input;
 
@@ -223,13 +223,9 @@ public class Block1 {
             k = listRE.get(h).getIndex();
             if (!listRE.get(h).isEntrance0()) {                
                 this.sre = new SRE(listE.get(k).getInputs());
-                //System.out.print("["+listRE.get(h).getIndex()+"]= ");
-                //this.sre.printSRE();
             }
             else{
                 this.sre = new SRE(listE.get(k-1).getInputs());
-                //System.out.print("["+listRE.get(h).getIndex()+"]= ");
-                //this.sre.printSRE();
             }
             this.scre = new SCRE(listW.get(k).getInputs());
             if(h == 0){
@@ -238,10 +234,7 @@ public class Block1 {
             else {
                 recalculateSCRE2(listRE.get(h-1).getIndex(),k);
             }
-            //PrintSCRE(k);
             this.soe = new SOE(listE.get(k).getOutputs());
-            //PrintSOE(k);
-            //writeFile("re.txt", h);
             tempFr = new Fr(this.soe, this.sre, this.scre, h);
             this.fr.add(tempFr);
             //Concatenar Inputs y Outputs   
@@ -595,6 +588,7 @@ public class Block1 {
         int [][] matrix1=MatrixUtils.OEStoMatrix( OESPrueba) ;
         //System.out.println("\n"+MatrixUtils.matrixToString(MatrixUtils.OEStoMatrix( OESPrueba) ));
         processMining ps=new processMining(outS);
+        System.out.println("que rollo con el pollo");
         //System.out.println(MatrixUtils.matrixToString(ps.pn.PN( outS ).incidenceMatrix));
         int [][] matrix2=ps.pn.PN( outS ).incidenceMatrix;
         algorithm3(matrix1,matrix2);

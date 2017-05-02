@@ -211,7 +211,7 @@ public class Merge{
 				// output pretty printed
 				jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 				jaxbMarshaller.marshal(pnml, file);
-				jaxbMarshaller.marshal(pnml, System.out);
+				//jaxbMarshaller.marshal(pnml, System.out);
 			} 
 		    catch (JAXBException e){
 				e.printStackTrace();

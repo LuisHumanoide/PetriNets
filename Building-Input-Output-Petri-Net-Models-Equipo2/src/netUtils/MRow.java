@@ -71,7 +71,7 @@ public class MRow{
         for(int i:this.row){
             cad=cad+" "+i;
         }
-        System.out.println(cad+" "+this.mark);
+        //System.out.println(cad+" "+this.mark);
     }
     
     
