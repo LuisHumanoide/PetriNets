@@ -586,10 +586,9 @@ public class Block1 {
             outS=outS+"T"+S.get( in)+" ";
         }
         int [][] matrix1=MatrixUtils.OEStoMatrix( OESPrueba) ;
-        //System.out.println("\n"+MatrixUtils.matrixToString(MatrixUtils.OEStoMatrix( OESPrueba) ));
+        System.out.println("matrix");
+        System.out.println(MatrixUtils.matrixToString(matrix1));
         processMining ps=new processMining(outS);
-        System.out.println("que rollo con el pollo");
-        //System.out.println(MatrixUtils.matrixToString(ps.pn.PN( outS ).incidenceMatrix));
         int [][] matrix2=ps.pn.PN( outS ).incidenceMatrix;
         algorithm3(matrix1,matrix2);
     }
